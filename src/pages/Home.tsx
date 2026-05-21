@@ -13,7 +13,7 @@ interface Product {
   category: string;
 }
 
-// ✅ 12 种面包！品类超级多！图片全部正常显示！
+// 12种面包，图片全是面包！
 const products: Product[] = [
   {
     id: 1,
@@ -23,7 +23,7 @@ const products: Product[] = [
     description: "天然酵母发酵，外皮酥脆内里柔软",
     calories: 250,
     category: "sourdough",
-    image: "https://picsum.photos/seed/sourdough/400/400",
+    image: "https://images.unsplash.com/photo-1586444248902-2f7c55f22106?w=400&h=400&fit=crop",
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ const products: Product[] = [
     description: "层次分明，奶香酥脆，经典早餐",
     calories: 320,
     category: "french",
-    image: "https://picsum.photos/seed/croissant/400/400",
+    image: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400&h=400&fit=crop",
   },
   {
     id: 3,
@@ -43,7 +43,7 @@ const products: Product[] = [
     description: "100%全麦，无油无糖健康首选",
     calories: 245,
     category: "toast",
-    image: "https://picsum.photos/seed/toast/400/400",
+    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&h=400&fit=crop",
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ const products: Product[] = [
     description: "黑麦粉+核桃，营养饱腹",
     calories: 220,
     category: "wholeWheat",
-    image: "https://picsum.photos/seed/walnut/400/400",
+    image: "https://images.unsplash.com/photo-1566709661243-347e175b5ecd?w=400&h=400&fit=crop",
   },
   {
     id: 5,
@@ -63,7 +63,7 @@ const products: Product[] = [
     description: "奶香浓郁，柔软拉丝超好吃",
     calories: 280,
     category: "toast",
-    image: "https://picsum.photos/seed/milkbread/400/400",
+    image: "https://images.unsplash.com/photo-1598373182133-52452f7691ef?w=400&h=400&fit=crop",
   },
   {
     id: 6,
@@ -73,7 +73,7 @@ const products: Product[] = [
     description: "日式抹茶+蜜红豆，香甜柔软",
     calories: 290,
     category: "sweet",
-    image: "https://picsum.photos/seed/matcha/400/400",
+    image: "https://images.unsplash.com/photo-1508738327661-681090a923f4?w=400&h=400&fit=crop",
   },
   {
     id: 7,
@@ -83,7 +83,7 @@ const products: Product[] = [
     description: "咸香芝士，口感绵密",
     calories: 310,
     category: "savory",
-    image: "https://picsum.photos/seed/cheese/400/400",
+    image: "https://images.unsplash.com/photo-1571091738676-2b5c77471429?w=400&h=400&fit=crop",
   },
   {
     id: 8,
@@ -93,7 +93,7 @@ const products: Product[] = [
     description: "酸甜蔓越莓，健康无负担",
     calories: 230,
     category: "wholeWheat",
-    image: "https://picsum.photos/seed/cranberry/400/400",
+    image: "https://images.unsplash.com/photo-1599599810069-5a967779e32f?w=400&h=400&fit=crop",
   },
   {
     id: 9,
@@ -103,7 +103,7 @@ const products: Product[] = [
     description: "浓郁可可，巧克力控必入",
     calories: 300,
     category: "sweet",
-    image: "https://picsum.photos/seed/chocolate/400/400",
+    image: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&h=400&fit=crop",
   },
   {
     id: 10,
@@ -113,7 +113,7 @@ const products: Product[] = [
     description: "蒜香浓郁，外脆内软",
     calories: 260,
     category: "french",
-    image: "https://picsum.photos/seed/garlic/400/400",
+    image: "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=400&h=400&fit=crop",
   },
   {
     id: 11,
@@ -123,7 +123,7 @@ const products: Product[] = [
     description: "天然南瓜泥，健康美味",
     calories: 210,
     category: "wholeWheat",
-    image: "https://picsum.photos/seed/pumpkin/400/400",
+    image: "https://images.unsplash.com/photo-1587241321921-91a834d6d191?w=400&h=400&fit=crop",
   },
   {
     id: 12,
@@ -133,7 +133,7 @@ const products: Product[] = [
     description: "软fufu奶油夹心，超好吃",
     calories: 320,
     category: "sweet",
-    image: "https://picsum.photos/seed/cream/400/400",
+    image: "https://images.unsplash.com/photo-1550617931-e17a7070dce2?w=400&h=400&fit=crop",
   },
 ];
 
@@ -199,7 +199,7 @@ export default function Home() {
               className="bg-white rounded-2xl shadow-sm overflow-hidden"
               onClick={() => navigate(`/product/${product.id}`)}
             >
-              {/* ✅ 图片 100% 显示 */}
+              {/* 面包图片区域 */}
               <div className="aspect-square w-full bg-gray-100">
                 <img
                   src={product.image}
