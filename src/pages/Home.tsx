@@ -13,35 +13,69 @@ interface Product {
   image: string;
 }
 
-const products: Product[] = [
+const products = [
   {
     id: 1,
-    name: '匠心手工酸种面包',
-    price: 45,
+    name: "匠心手工酸种面包",
+    price: 28,
     rating: 4.9,
-    description: '经过72小时自然发酵，外壳酥脆，内里湿润多孔，',
-    calories: 210,
-    image: 'https://neeko-copilot.bytedance.net/api/text2image?prompt=artisan%20sourdough%20bread%20on%20wooden%20board%20warm%20lighting%20bakery%20style&image_size=landscape_4_3',
+    description: "传统工艺发酵，外皮酥脆，内部柔软，麦香浓郁。",
+    calories: 250,
+    category: "sourdough",
+    image: "https://img0.baidu.com/it/u=889539108,2590713655&fm=253&fmt=auto&app=138&f=JPEG?w=700&h=700",
   },
   {
     id: 2,
-    name: '海盐开心果可颂',
+    name: "海盐开心果可颂",
     price: 32,
     rating: 4.8,
-    description: '选用法国AOP黄油开酥，层叠分明，内裹浓郁开心果酱，海盐点缀提味。',
+    description: "法式开酥，层次丰富，内馅绵密开心果，海盐提香。",
     calories: 320,
-    image: 'https://neeko-copilot.bytedance.net/api/text2image?prompt=sea%20salt%20pistachio%20croissant%20on%20wooden%20board%20bakery%20style&image_size=landscape_4_3',
+    category: "sourdough",
+    image: "https://img1.baidu.com/it/u=2541568232,204151114&fm=253&fmt=auto&app=138&f=JPEG?w=700&h=700",
   },
   {
     id: 3,
-    name: '全麦谷物核桃包',
+    name: "全麦谷物核桃包",
     price: 38,
     rating: 4.7,
-    description: '精选石磨全麦粉，加入大量香脆核桃仁，饱腹感强，是健康的理想选择。',
+    description: "高纤全麦，核桃坚果满满，无油无糖，健康饱腹。",
     calories: 245,
-    image: 'https://neeko-copilot.bytedance.net/api/text2image?prompt=whole%20grain%20walnut%20bread%20on%20wooden%20board%20bakery%20style&image_size=landscape_4_3',
+    category: "wholeWheat",
+    image: "https://img2.baidu.com/it/u=145163316,2187227400&fm=253&fmt=auto&app=120&f=JPEG?w=700&h=700",
+  },
+  {
+    id: 4,
+    name: "黑麦蔓越莓软欧",
+    price: 26,
+    rating: 4.6,
+    description: "黑麦粉制作，酸甜蔓越莓，口感柔软有嚼劲。",
+    calories: 220,
+    category: "wholeWheat",
+    image: "https://img0.baidu.com/it/u=2792275108,3302909138&fm=253&fmt=auto&app=138&f=JPEG?w=700&h=700",
+  },
+  {
+    id: 5,
+    name: "奶香吐司",
+    price: 18,
+    rating: 4.9,
+    description: "牛奶和面，奶香浓郁，柔软拉丝，早餐必备。",
+    calories: 280,
+    category: "toast",
+    image: "https://img1.baidu.com/it/u=3264338331,1601681197&fm=253&fmt=auto&app=138&f=JPEG?w=700&h=700",
+  },
+  {
+    id: 6,
+    name: "抹茶红豆吐司",
+    price: 22,
+    rating: 4.8,
+    description: "日式抹茶风味，搭配蜜红豆，香甜柔软。",
+    calories: 290,
+    category: "toast",
+    image: "https://img2.baidu.com/it/u=2283321807,1184255886&fm=253&fmt=auto&app=138&f=JPEG?w=700&h=700",
   },
 ];
+
 
 const categories = ['全部', '酸种面包', '全麦/无油', '吐司/三明治'];
 
