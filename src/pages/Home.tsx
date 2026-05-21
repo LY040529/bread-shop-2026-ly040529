@@ -13,7 +13,6 @@ interface Product {
   category: string;
 }
 
-// ✅ 所有图片都是和名字一一对应的面包，地址稳定，不会乱跳也不会白屏
 const products: Product[] = [
   {
     id: 1,
@@ -95,46 +94,6 @@ const products: Product[] = [
     category: "wholeWheat",
     image: "https://images.unsplash.com/photo-1599599810069-5a967779e32f?w=400&h=400&fit=crop",
   },
-  {
-    id: 9,
-    name: "巧克力吐司",
-    price: 29,
-    rating: 4.9,
-    description: "浓郁可可，巧克力控必入",
-    calories: 300,
-    category: "sweet",
-    image: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&h=400&fit=crop",
-  },
-  {
-    id: 10,
-    name: "蒜香法棍",
-    price: 19,
-    rating: 4.7,
-    description: "蒜香浓郁，外脆内软",
-    calories: 260,
-    category: "french",
-    image: "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=400&h=400&fit=crop",
-  },
-  {
-    id: 11,
-    name: "南瓜全麦包",
-    price: 23,
-    rating: 4.8,
-    description: "天然南瓜泥，健康美味",
-    calories: 210,
-    category: "wholeWheat",
-    image: "https://images.unsplash.com/photo-1587241321921-91a834d6d191?w=400&h=400&fit=crop",
-  },
-  {
-    id: 12,
-    name: "奶油餐包",
-    price: 16,
-    rating: 4.9,
-    description: "软fufu奶油夹心，超好吃",
-    calories: 320,
-    category: "sweet",
-    image: "https://images.unsplash.com/photo-1550617931-e17a7070dce2?w=400&h=400&fit=crop",
-  },
 ];
 
 const categories = ['全部', '酸种面包', '全麦/无油', '吐司/三明治', '法式', '甜口', '咸口'];
@@ -198,15 +157,13 @@ export default function Home() {
               className="bg-white rounded-2xl shadow-sm overflow-hidden"
               onClick={() => navigate(`/product/${product.id}`)}
             >
-              {/* ✅ 图片加载容错处理，再也不会白屏 */}
-              <div className="aspect-square w-full bg-gray-100 relative">
+              <div className="aspect-square w-full bg-gray-100">
                 <img
                   src={product.image}
                   alt={product.name}
                   className="w-full h-full object-cover"
                   onError={(e) => {
-                    // 加载失败时，用面包店占位图兜底
-                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&h=400&fit=crop";
+                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1586444248902-2f7c55f22106?w=400&h=400&fit=crop";
                   }}
                 />
               </div>
