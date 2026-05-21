@@ -22,7 +22,7 @@ const products: Product[] = [
     description: "天然酵母发酵，外皮酥脆内里柔软",
     calories: 250,
     category: "sourdough",
-    image: "https://images.unsplash.com/photo-1586444248902-2f7c55f22106?w=400&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?w=400&h=400&fit=crop",
   },
   {
     id: 2,
@@ -32,7 +32,7 @@ const products: Product[] = [
     description: "层次分明，奶香酥脆，经典早餐",
     calories: 320,
     category: "french",
-    image: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?w=400&h=400&fit=crop",
   },
   {
     id: 3,
@@ -42,7 +42,7 @@ const products: Product[] = [
     description: "100%全麦，无油无糖健康首选",
     calories: 245,
     category: "toast",
-    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/4963156/pexels-photo-4963156.jpeg?w=400&h=400&fit=crop",
   },
   {
     id: 4,
@@ -52,7 +52,7 @@ const products: Product[] = [
     description: "黑麦粉+核桃，营养饱腹",
     calories: 220,
     category: "wholeWheat",
-    image: "https://images.unsplash.com/photo-1566709661243-347e175b5ecd?w=400&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/1028425/pexels-photo-1028425.jpeg?w=400&h=400&fit=crop",
   },
   {
     id: 5,
@@ -62,7 +62,7 @@ const products: Product[] = [
     description: "奶香浓郁，柔软拉丝超好吃",
     calories: 280,
     category: "toast",
-    image: "https://images.unsplash.com/photo-1598373182133-52452f7691ef?w=400&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/1884359/pexels-photo-1884359.jpeg?w=400&h=400&fit=crop",
   },
   {
     id: 6,
@@ -72,7 +72,7 @@ const products: Product[] = [
     description: "日式抹茶+蜜红豆，香甜柔软",
     calories: 290,
     category: "sweet",
-    image: "https://images.unsplash.com/photo-1508738327661-681090a923f4?w=400&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/226789/pexels-photo-226789.jpeg?w=400&h=400&fit=crop",
   },
   {
     id: 7,
@@ -82,7 +82,7 @@ const products: Product[] = [
     description: "咸香芝士，口感绵密",
     calories: 310,
     category: "savory",
-    image: "https://images.unsplash.com/photo-1571091738676-2b5c77471429?w=400&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/541916/pexels-photo-541916.jpeg?w=400&h=400&fit=crop",
   },
   {
     id: 8,
@@ -92,7 +92,7 @@ const products: Product[] = [
     description: "酸甜蔓越莓，健康无负担",
     calories: 230,
     category: "wholeWheat",
-    image: "https://images.unsplash.com/photo-1599599810069-5a967779e32f?w=400&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/1567574/pexels-photo-1567574.jpeg?w=400&h=400&fit=crop",
   },
 ];
 
@@ -163,7 +163,8 @@ export default function Home() {
                   alt={product.name}
                   className="w-full h-full object-cover"
                   onError={(e) => {
-                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1586444248902-2f7c55f22106?w=400&h=400&fit=crop";
+                    // 兜底：随便一张面包图，避免空白
+                    (e.target as HTMLImageElement).src = "https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?w=400&h=400&fit=crop";
                   }}
                 />
               </div>
