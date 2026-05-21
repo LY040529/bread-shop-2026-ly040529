@@ -157,11 +157,11 @@ export default function Home() {
           </button>
         </section>
 
-        <div className="space-y-4">
+<div className="grid grid-cols-1 gap-4">
           {products.map((product, index) => (
             <div 
               key={product.id}
-              className="bg-white rounded-2xl p-4 shadow-soft hover:shadow-card transition-all animate-slide-up cursor-pointer"
+className="bg-white rounded-2xl shadow-soft hover:shadow-card transition-all animate-slide-up cursor-pointer overflow-hidden"
               style={{ animationDelay: `${index * 100}ms` }}
               onClick={() => navigate(`/product/${product.id}`)}
             >
@@ -169,7 +169,7 @@ export default function Home() {
 <img
   src={product.image}
   alt={product.name}
-  className="w-full h-48 object-contain bg-gray-50 rounded-xl"
+  className="w-full h-40 object-cover"
 />
                 <div className="absolute top-2 left-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full flex items-center gap-1">
                   <svg viewBox="0 0 24 24" className="w-4 h-4 text-yellow-500" fill="currentColor">
