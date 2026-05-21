@@ -22,7 +22,8 @@ const products = [
     description: "传统工艺发酵，外皮酥脆，内部柔软，麦香浓郁。",
     calories: 250,
     category: "sourdough",
-    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=700&h=700&fit=crop",
+    // 宽高比 8:3，和你的卡片完美适配
+    image: "https://images.unsplash.com/photo-1586444248902-2f7c55f22106?w=800&h=300&fit=crop",
   },
   {
     id: 2,
@@ -32,7 +33,7 @@ const products = [
     description: "法式开酥，层次丰富，内馅绵密开心果，海盐提香。",
     calories: 320,
     category: "sourdough",
-    image: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=700&h=700&fit=crop",
+    image: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=800&h=300&fit=crop",
   },
   {
     id: 3,
@@ -42,7 +43,7 @@ const products = [
     description: "高纤全麦，核桃坚果满满，无油无糖，健康饱腹。",
     calories: 245,
     category: "wholeWheat",
-    image: "https://images.unsplash.com/photo-1586444248902-2f7c55f22106?w=700&h=700&fit=crop",
+    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&h=300&fit=crop",
   },
   {
     id: 4,
@@ -52,7 +53,7 @@ const products = [
     description: "黑麦粉制作，酸甜蔓越莓，口感柔软有嚼劲。",
     calories: 220,
     category: "wholeWheat",
-    image: "https://images.unsplash.com/photo-1585476263306-07a53990400b?w=700&h=700&fit=crop",
+    image: "https://images.unsplash.com/photo-1585476263306-07a53990400b?w=800&h=300&fit=crop",
   },
   {
     id: 5,
@@ -62,7 +63,7 @@ const products = [
     description: "牛奶和面，奶香浓郁，柔软拉丝，早餐必备。",
     calories: 280,
     category: "toast",
-    image: "https://images.unsplash.com/photo-1598373182133-52452f7691ef?w=700&h=700&fit=crop",
+    image: "https://images.unsplash.com/photo-1598373182133-52452f7691ef?w=800&h=300&fit=crop",
   },
   {
     id: 6,
@@ -72,7 +73,7 @@ const products = [
     description: "日式抹茶风味，搭配蜜红豆，香甜柔软。",
     calories: 290,
     category: "toast",
-    image: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=700&h=700&fit=crop",
+    image: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=800&h=300&fit=crop",
   },
 ];
 
