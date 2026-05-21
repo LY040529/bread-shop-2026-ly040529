@@ -8,92 +8,19 @@ interface Product {
   price: number;
   rating: number;
   description: string;
-  calories: number;
   image: string;
   category: string;
 }
 
 const products: Product[] = [
-  {
-    id: 1,
-    name: "经典酸种面包",
-    price: 28,
-    rating: 4.9,
-    description: "天然酵母发酵，外皮酥脆内里柔软",
-    calories: 250,
-    category: "sourdough",
-    image: "/images/bread1.jpg",
-  },
-  {
-    id: 2,
-    name: "法式可颂",
-    price: 15,
-    rating: 4.8,
-    description: "层次分明，奶香酥脆，经典早餐",
-    calories: 320,
-    category: "french",
-    image: "/images/bread2.jpg",
-  },
-  {
-    id: 3,
-    name: "全麦吐司",
-    price: 22,
-    rating: 4.7,
-    description: "100%全麦，无油无糖健康首选",
-    calories: 245,
-    category: "toast",
-    image: "/images/bread3.jpg",
-  },
-  {
-    id: 4,
-    name: "黑麦核桃面包",
-    price: 32,
-    rating: 4.6,
-    description: "黑麦粉+核桃，营养饱腹",
-    calories: 220,
-    category: "wholeWheat",
-    image: "/images/bread4.jpg",
-  },
-  {
-    id: 5,
-    name: "牛奶软吐司",
-    price: 18,
-    rating: 4.9,
-    description: "奶香浓郁，柔软拉丝超好吃",
-    calories: 280,
-    category: "toast",
-    image: "/images/bread5.jpg",
-  },
-  {
-    id: 6,
-    name: "抹茶红豆包",
-    price: 24,
-    rating: 4.8,
-    description: "日式抹茶+蜜红豆，香甜柔软",
-    calories: 290,
-    category: "sweet",
-    image: "/images/bread6.jpg",
-  },
-  {
-    id: 7,
-    name: "海盐芝士面包",
-    price: 26,
-    rating: 4.8,
-    description: "咸香芝士，口感绵密",
-    calories: 310,
-    category: "savory",
-    image: "/images/bread7.jpg",
-  },
-  {
-    id: 8,
-    name: "蔓越莓软欧",
-    price: 25,
-    rating: 4.7,
-    description: "酸甜蔓越莓，健康无负担",
-    calories: 230,
-    category: "wholeWheat",
-    image: "/images/bread8.jpg",
-  },
+  { id: 1, name: "经典酸种面包", price: 28, rating: 4.9, description: "天然酵母发酵", image: "/breadImg/1", category: "sourdough" },
+  { id: 2, name: "法式可颂", price: 15, rating: 4.8, description: "奶香酥脆", image: "/breadImg/2", category: "french" },
+  { id: 3, name: "全麦吐司", price: 22, rating: 4.7, description: "100%全麦", image: "/breadImg/3", category: "toast" },
+  { id: 4, name: "黑麦核桃面包", price: 32, rating: 4.6, description: "黑麦+核桃", image: "/breadImg/4", category: "wholeWheat" },
+  { id: 5, name: "牛奶软吐司", price: 18, rating: 4.9, description: "柔软拉丝", image: "/breadImg/5", category: "toast" },
+  { id: 6, name: "抹茶红豆包", price: 24, rating: 4.8, description: "日式甜面包", image: "/breadImg/6", category: "sweet" },
+  { id: 7, name: "海盐芝士面包", price: 26, rating: 4.8, description: "咸香芝士", image: "/breadImg/7", category: "savory" },
+  { id: 8, name: "蔓越莓软欧", price: 25, rating: 4.7, description: "酸甜口感", image: "/breadImg/8", category: "wholeWheat" },
 ];
 
 const categories = ['全部', '酸种面包', '全麦/无油', '吐司/三明治', '法式', '甜口', '咸口'];
