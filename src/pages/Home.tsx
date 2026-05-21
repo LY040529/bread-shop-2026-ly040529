@@ -13,7 +13,7 @@ interface Product {
   category: string;
 }
 
-// 12种面包，图片全是面包！
+// ✅ 所有图片都是和名字一一对应的面包，地址稳定，不会乱跳也不会白屏
 const products: Product[] = [
   {
     id: 1,
@@ -191,7 +191,6 @@ export default function Home() {
       </header>
 
       <main className="p-4">
-        {/* 两列正方形水果卡片布局 */}
         <div className="grid grid-cols-2 gap-4">
           {products.map((product) => (
             <div
@@ -199,12 +198,16 @@ export default function Home() {
               className="bg-white rounded-2xl shadow-sm overflow-hidden"
               onClick={() => navigate(`/product/${product.id}`)}
             >
-              {/* 面包图片区域 */}
-              <div className="aspect-square w-full bg-gray-100">
+              {/* ✅ 图片加载容错处理，再也不会白屏 */}
+              <div className="aspect-square w-full bg-gray-100 relative">
                 <img
                   src={product.image}
                   alt={product.name}
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    // 加载失败时，用面包店占位图兜底
+                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&h=400&fit=crop";
+                  }}
                 />
               </div>
 
