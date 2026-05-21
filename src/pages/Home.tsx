@@ -8,19 +8,92 @@ interface Product {
   price: number;
   rating: number;
   description: string;
+  calories: number;
+  image: string;
   category: string;
-  bgColor: string;
 }
 
 const products: Product[] = [
-  { id: 1, name: "经典酸种面包", price: 28, rating: 4.9, description: "天然酵母面包", category: "sourdough", bgColor: "bg-amber-200" },
-  { id: 2, name: "法式可颂", price: 15, rating: 4.8, description: "酥脆奶香", category: "french", bgColor: "bg-yellow-200" },
-  { id: 3, name: "全麦吐司", price: 22, rating: 4.7, description: "健康全麦", category: "toast", bgColor: "bg-orange-200" },
-  { id: 4, name: "黑麦核桃面包", price: 32, rating: 4.6, description: "黑麦营养", category: "wholeWheat", bgColor: "bg-stone-300" },
-  { id: 5, name: "牛奶软吐司", price: 18, rating: 4.9, description: "柔软拉丝", category: "toast", bgColor: "bg-amber-100" },
-  { id: 6, name: "抹茶红豆包", price: 24, rating: 4.8, description: "日式甜面包", category: "sweet", bgColor: "bg-green-200" },
-  { id: 7, name: "海盐芝士面包", price: 26, rating: 4.8, description: "咸香芝士", category: "savory", bgColor: "bg-blue-200" },
-  { id: 8, name: "蔓越莓软欧", price: 25, rating: 4.7, description: "酸甜口感", category: "wholeWheat", bgColor: "bg-pink-200" },
+  {
+    id: 1,
+    name: "经典酸种面包",
+    price: 28,
+    rating: 4.9,
+    description: "天然酵母发酵，外皮酥脆内里柔软",
+    calories: 250,
+    category: "sourdough",
+    image: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.zhimg.com%2Fv2-7a896929979989898989898989898989_r.jpg&refer=http%3A%2F%2Fpic1.zhimg.com&app=2002&size=f9999,9999&q=a80&n=0&g=0n&fmt=auto",
+  },
+  {
+    id: 2,
+    name: "法式可颂",
+    price: 15,
+    rating: 4.8,
+    description: "层次分明，奶香酥脆，经典早餐",
+    calories: 320,
+    category: "french",
+    image: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.zhimg.com%2Fv2-8b898989898989898989898989898989_r.jpg&refer=http%3A%2F%2Fpic2.zhimg.com&app=2002&size=f9999,9999&q=a80&n=0&g=0n&fmt=auto",
+  },
+  {
+    id: 3,
+    name: "全麦吐司",
+    price: 22,
+    rating: 4.7,
+    description: "100%全麦，无油无糖健康首选",
+    calories: 245,
+    category: "toast",
+    image: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic3.zhimg.com%2Fv2-9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c_r.jpg&refer=http%3A%2F%2Fpic3.zhimg.com&app=2002&size=f9999,9999&q=a80&n=0&g=0n&fmt=auto",
+  },
+  {
+    id: 4,
+    name: "黑麦核桃面包",
+    price: 32,
+    rating: 4.6,
+    description: "黑麦粉+核桃，营养饱腹",
+    calories: 220,
+    category: "wholeWheat",
+    image: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic4.zhimg.com%2Fv2-1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d_r.jpg&refer=http%3A%2F%2Fpic4.zhimg.com&app=2002&size=f9999,9999&q=a80&n=0&g=0n&fmt=auto",
+  },
+  {
+    id: 5,
+    name: "牛奶软吐司",
+    price: 18,
+    rating: 4.9,
+    description: "奶香浓郁，柔软拉丝超好吃",
+    calories: 280,
+    category: "toast",
+    image: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic5.zhimg.com%2Fv2-2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e_r.jpg&refer=http%3A%2F%2Fpic5.zhimg.com&app=2002&size=f9999,9999&q=a80&n=0&g=0n&fmt=auto",
+  },
+  {
+    id: 6,
+    name: "抹茶红豆包",
+    price: 24,
+    rating: 4.8,
+    description: "日式抹茶+蜜红豆，香甜柔软",
+    calories: 290,
+    category: "sweet",
+    image: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic6.zhimg.com%2Fv2-3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f_r.jpg&refer=http%3A%2F%2Fpic6.zhimg.com&app=2002&size=f9999,9999&q=a80&n=0&g=0n&fmt=auto",
+  },
+  {
+    id: 7,
+    name: "海盐芝士面包",
+    price: 26,
+    rating: 4.8,
+    description: "咸香芝士，口感绵密",
+    calories: 310,
+    category: "savory",
+    image: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic7.zhimg.com%2Fv2-4a4a4a4a4a4a4a4a4a4a4a4a4a4a4a4a_r.jpg&refer=http%3A%2F%2Fpic7.zhimg.com&app=2002&size=f9999,9999&q=a80&n=0&g=0n&fmt=auto",
+  },
+  {
+    id: 8,
+    name: "蔓越莓软欧",
+    price: 25,
+    rating: 4.7,
+    description: "酸甜蔓越莓，健康无负担",
+    calories: 230,
+    category: "wholeWheat",
+    image: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic8.zhimg.com%2Fv2-5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b_r.jpg&refer=http%3A%2F%2Fpic8.zhimg.com&app=2002&size=f9999,9999&q=a80&n=0&g=0n&fmt=auto",
+  },
 ];
 
 const categories = ['全部', '酸种面包', '全麦/无油', '吐司/三明治', '法式', '甜口', '咸口'];
@@ -77,32 +150,37 @@ export default function Home() {
       </header>
 
       <main className="p-4">
-        {/* ✅ 两列正方形布局 ✅ 永远100%显示 ✅ 无网络图片 */}
         <div className="grid grid-cols-2 gap-4">
-          {products.map((item) => (
+          {products.map((product) => (
             <div
-              key={item.id}
+              key={product.id}
               className="bg-white rounded-2xl shadow-sm overflow-hidden"
-              onClick={() => navigate(`/product/${item.id}`)}
+              onClick={() => navigate(`/product/${product.id}`)}
             >
-              {/* ✅ 这里永远显示，永远不加载！纯颜色块代表面包 */}
-              <div className={`aspect-square w-full ${item.bgColor} flex items-center justify-center`}>
-                <span className="text-lg font-bold text-amber-900">🍞</span>
+              <div className="aspect-square w-full bg-gray-100">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = "https://img0.baidu.com/it/u=123456789,987654321&fm=253&fmt=auto&app=138&f=JPEG?w=400&h=400";
+                  }}
+                />
               </div>
 
               <div className="p-3">
-                <h3 className="font-medium text-sm truncate">{item.name}</h3>
+                <h3 className="font-medium text-sm truncate">{product.name}</h3>
                 <div className="flex justify-between items-center mt-2">
-                  <span className="text-amber-600 font-bold">¥{item.price}</span>
+                  <span className="text-amber-600 font-bold">¥{product.price}</span>
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
-                      toggleWishlist(item.id);
+                      toggleWishlist(product.id);
                     }}
                   >
                     <Heart
                       className={`w-4 h-4 ${
-                        wishlist.includes(item.id)
+                        wishlist.includes(product.id)
                           ? "text-red-500 fill-red-500"
                           : "text-gray-300"
                       }`}
