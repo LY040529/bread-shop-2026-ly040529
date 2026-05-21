@@ -165,7 +165,6 @@ export default function Home() {
       className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-all cursor-pointer overflow-hidden"
       onClick={() => navigate(`/product/${product.id}`)}
     >
-      {/* 1:1 方形容器，和你水果卡片一样 */}
       <div className="w-full aspect-square bg-gray-50 flex items-center justify-center p-2">
         <img
           src={product.image}
@@ -173,13 +172,17 @@ export default function Home() {
           className="max-w-full max-h-full object-contain rounded-lg"
         />
       </div>
-
-      {/* 文字区域，和你水果卡片风格一致 */}
       <div className="p-3">
-        <h3 className="font-semibold text-gray-800 text-sm truncate">{product.name}</h3>
+        <h3 className="font-semibold text-gray-800 text-sm truncate">
+          {product.name}
+        </h3>
         <div className="flex justify-between items-center mt-2">
-          <span className="text-orange-500 font-bold">¥{product.price}</span>
-          <span className="text-yellow-500 text-xs">⭐{product.rating}</span>
+          <span className="text-orange-500 font-bold">
+            ¥{product.price}
+          </span>
+          <span className="text-yellow-500 text-xs">
+            ⭐{product.rating}
+          </span>
         </div>
       </div>
     </div>
