@@ -176,7 +176,7 @@ export default function Home() {
 
       {/* 文字区域，和你水果卡片风格一致 */}
       <div className="p-3">
-        <h3 className="font-semibold text-gray-800 text-sm">{product.name}</h3>
+        <h3 className="font-semibold text-gray-800 text-sm truncate">{product.name}</h3>
         <div className="flex justify-between items-center mt-2">
           <span className="text-orange-500 font-bold">¥{product.price}</span>
           <span className="text-yellow-500 text-xs">⭐{product.rating}</span>
@@ -185,43 +185,6 @@ export default function Home() {
     </div>
   ))}
 </div>
-
-              <h3 className="font-semibold text-brown-800 mb-1">{product.name}</h3>
-              <p className="text-sm text-brown-500 mb-3 line-clamp-2">{product.description}</p>
-
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-4">
-                  <span className="text-lg font-bold text-primary-600">¥{product.price}</span>
-                  <span className="text-xs text-brown-400">{product.calories} kcal</span>
-                </div>
-                <button className="px-4 py-2 bg-primary-500 text-white text-sm font-medium rounded-full hover:bg-primary-600 transition-all">
-                  加购 +
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div 
-          className="bg-gradient-to-r from-primary-50 to-primary-100 rounded-2xl p-4 cursor-pointer hover:shadow-soft transition-all"
-          onClick={() => navigate('/guide')}
-        >
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-primary-500 rounded-xl flex items-center justify-center">
-                <BookOpen className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-brown-800">选购避雷指南</h3>
-                <p className="text-xs text-brown-500">学会辨别配料表，避开添加剂与高糖陷阱。</p>
-              </div>
-            </div>
-            <svg viewBox="0 0 24 24" className="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M9 18l6-6-6-6"/>
-            </svg>
-          </div>
-        </div>
-      </main>
 
       <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-warm-200 px-4 py-2 safe-area-bottom">
         <div className="flex items-center justify-around">
