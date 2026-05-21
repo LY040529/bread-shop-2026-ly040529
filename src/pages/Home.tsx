@@ -22,7 +22,7 @@ const products: Product[] = [
     description: "天然酵母发酵，外皮酥脆内里柔软",
     calories: 250,
     category: "sourdough",
-    image: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.zhimg.com%2Fv2-7a896929979989898989898989898989_r.jpg&refer=http%3A%2F%2Fpic1.zhimg.com&app=2002&size=f9999,9999&q=a80&n=0&g=0n&fmt=auto",
+    image: "/images/bread1.jpg",
   },
   {
     id: 2,
@@ -32,7 +32,7 @@ const products: Product[] = [
     description: "层次分明，奶香酥脆，经典早餐",
     calories: 320,
     category: "french",
-    image: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.zhimg.com%2Fv2-8b898989898989898989898989898989_r.jpg&refer=http%3A%2F%2Fpic2.zhimg.com&app=2002&size=f9999,9999&q=a80&n=0&g=0n&fmt=auto",
+    image: "/images/bread2.jpg",
   },
   {
     id: 3,
@@ -42,7 +42,7 @@ const products: Product[] = [
     description: "100%全麦，无油无糖健康首选",
     calories: 245,
     category: "toast",
-    image: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic3.zhimg.com%2Fv2-9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c9c_r.jpg&refer=http%3A%2F%2Fpic3.zhimg.com&app=2002&size=f9999,9999&q=a80&n=0&g=0n&fmt=auto",
+    image: "/images/bread3.jpg",
   },
   {
     id: 4,
@@ -52,7 +52,7 @@ const products: Product[] = [
     description: "黑麦粉+核桃，营养饱腹",
     calories: 220,
     category: "wholeWheat",
-    image: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic4.zhimg.com%2Fv2-1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d_r.jpg&refer=http%3A%2F%2Fpic4.zhimg.com&app=2002&size=f9999,9999&q=a80&n=0&g=0n&fmt=auto",
+    image: "/images/bread4.jpg",
   },
   {
     id: 5,
@@ -62,7 +62,7 @@ const products: Product[] = [
     description: "奶香浓郁，柔软拉丝超好吃",
     calories: 280,
     category: "toast",
-    image: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic5.zhimg.com%2Fv2-2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e_r.jpg&refer=http%3A%2F%2Fpic5.zhimg.com&app=2002&size=f9999,9999&q=a80&n=0&g=0n&fmt=auto",
+    image: "/images/bread5.jpg",
   },
   {
     id: 6,
@@ -72,7 +72,7 @@ const products: Product[] = [
     description: "日式抹茶+蜜红豆，香甜柔软",
     calories: 290,
     category: "sweet",
-    image: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic6.zhimg.com%2Fv2-3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f3f_r.jpg&refer=http%3A%2F%2Fpic6.zhimg.com&app=2002&size=f9999,9999&q=a80&n=0&g=0n&fmt=auto",
+    image: "/images/bread6.jpg",
   },
   {
     id: 7,
@@ -82,7 +82,7 @@ const products: Product[] = [
     description: "咸香芝士，口感绵密",
     calories: 310,
     category: "savory",
-    image: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic7.zhimg.com%2Fv2-4a4a4a4a4a4a4a4a4a4a4a4a4a4a4a4a_r.jpg&refer=http%3A%2F%2Fpic7.zhimg.com&app=2002&size=f9999,9999&q=a80&n=0&g=0n&fmt=auto",
+    image: "/images/bread7.jpg",
   },
   {
     id: 8,
@@ -92,7 +92,7 @@ const products: Product[] = [
     description: "酸甜蔓越莓，健康无负担",
     calories: 230,
     category: "wholeWheat",
-    image: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic8.zhimg.com%2Fv2-5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b_r.jpg&refer=http%3A%2F%2Fpic8.zhimg.com&app=2002&size=f9999,9999&q=a80&n=0&g=0n&fmt=auto",
+    image: "/images/bread8.jpg",
   },
 ];
 
@@ -162,9 +162,6 @@ export default function Home() {
                   src={product.image}
                   alt={product.name}
                   className="w-full h-full object-cover"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src = "https://img0.baidu.com/it/u=123456789,987654321&fm=253&fmt=auto&app=138&f=JPEG?w=400&h=400";
-                  }}
                 />
               </div>
 
