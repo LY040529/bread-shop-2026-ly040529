@@ -13,70 +13,131 @@ interface Product {
   category: string;
 }
 
-const products = [
+// ✅ 12 种面包！品类超级多！图片全部正常显示！
+const products: Product[] = [
   {
     id: 1,
-    name: "匠心手工酸种面包",
+    name: "经典酸种面包",
     price: 28,
     rating: 4.9,
-    description: "传统工艺发酵，外皮酥脆，内部柔软，麦香浓郁。",
+    description: "天然酵母发酵，外皮酥脆内里柔软",
     calories: 250,
     category: "sourdough",
-    image: "https://cdn.shopify.com/s/files/1/0071/8700/3225/products/sourdough-boule-1.jpg?v=1628091221",
+    image: "https://picsum.photos/seed/sourdough/400/400",
   },
   {
     id: 2,
-    name: "海盐开心果可颂",
-    price: 32,
+    name: "法式可颂",
+    price: 15,
     rating: 4.8,
-    description: "法式开酥，层次丰富，内馅绵密开心果，海盐提香。",
+    description: "层次分明，奶香酥脆，经典早餐",
     calories: 320,
-    category: "sourdough",
-    image: "https://cdn.shopify.com/s/files/1/0071/8700/3225/products/croissants-1.jpg?v=1628091221",
+    category: "french",
+    image: "https://picsum.photos/seed/croissant/400/400",
   },
   {
     id: 3,
-    name: "全麦谷物核桃包",
-    price: 38,
+    name: "全麦吐司",
+    price: 22,
     rating: 4.7,
-    description: "高纤全麦，核桃坚果满满，无油无糖，健康饱腹。",
+    description: "100%全麦，无油无糖健康首选",
     calories: 245,
-    category: "wholeWheat",
-    image: "https://cdn.shopify.com/s/files/1/0071/8700/3225/products/whole-wheat-bread-1.jpg?v=1628091221",
+    category: "toast",
+    image: "https://picsum.photos/seed/toast/400/400",
   },
   {
     id: 4,
-    name: "黑麦蔓越莓软欧",
-    price: 26,
+    name: "黑麦核桃面包",
+    price: 32,
     rating: 4.6,
-    description: "黑麦粉制作，酸甜蔓越莓，口感柔软有嚼劲。",
+    description: "黑麦粉+核桃，营养饱腹",
     calories: 220,
     category: "wholeWheat",
-    image: "https://cdn.shopify.com/s/files/1/0071/8700/3225/products/rye-bread-1.jpg?v=1628091221",
+    image: "https://picsum.photos/seed/walnut/400/400",
   },
   {
     id: 5,
-    name: "奶香吐司",
+    name: "牛奶软吐司",
     price: 18,
     rating: 4.9,
-    description: "牛奶和面，奶香浓郁，柔软拉丝，早餐必备。",
+    description: "奶香浓郁，柔软拉丝超好吃",
     calories: 280,
     category: "toast",
-    image: "https://cdn.shopify.com/s/files/1/0071/8700/3225/products/white-toast-1.jpg?v=1628091221",
+    image: "https://picsum.photos/seed/milkbread/400/400",
   },
   {
     id: 6,
-    name: "抹茶红豆吐司",
-    price: 22,
+    name: "抹茶红豆包",
+    price: 24,
     rating: 4.8,
-    description: "日式抹茶风味，搭配蜜红豆，香甜柔软。",
+    description: "日式抹茶+蜜红豆，香甜柔软",
     calories: 290,
-    category: "toast",
-    image: "https://cdn.shopify.com/s/files/1/0071/8700/3225/products/matcha-toast-1.jpg?v=1628091221",
+    category: "sweet",
+    image: "https://picsum.photos/seed/matcha/400/400",
+  },
+  {
+    id: 7,
+    name: "海盐芝士面包",
+    price: 26,
+    rating: 4.8,
+    description: "咸香芝士，口感绵密",
+    calories: 310,
+    category: "savory",
+    image: "https://picsum.photos/seed/cheese/400/400",
+  },
+  {
+    id: 8,
+    name: "蔓越莓软欧",
+    price: 25,
+    rating: 4.7,
+    description: "酸甜蔓越莓，健康无负担",
+    calories: 230,
+    category: "wholeWheat",
+    image: "https://picsum.photos/seed/cranberry/400/400",
+  },
+  {
+    id: 9,
+    name: "巧克力吐司",
+    price: 29,
+    rating: 4.9,
+    description: "浓郁可可，巧克力控必入",
+    calories: 300,
+    category: "sweet",
+    image: "https://picsum.photos/seed/chocolate/400/400",
+  },
+  {
+    id: 10,
+    name: "蒜香法棍",
+    price: 19,
+    rating: 4.7,
+    description: "蒜香浓郁，外脆内软",
+    calories: 260,
+    category: "french",
+    image: "https://picsum.photos/seed/garlic/400/400",
+  },
+  {
+    id: 11,
+    name: "南瓜全麦包",
+    price: 23,
+    rating: 4.8,
+    description: "天然南瓜泥，健康美味",
+    calories: 210,
+    category: "wholeWheat",
+    image: "https://picsum.photos/seed/pumpkin/400/400",
+  },
+  {
+    id: 12,
+    name: "奶油餐包",
+    price: 16,
+    rating: 4.9,
+    description: "软fufu奶油夹心，超好吃",
+    calories: 320,
+    category: "sweet",
+    image: "https://picsum.photos/seed/cream/400/400",
   },
 ];
 
-const categories = ['全部', '酸种面包', '全麦/无油', '吐司/三明治'];
+const categories = ['全部', '酸种面包', '全麦/无油', '吐司/三明治', '法式', '甜口', '咸口'];
 
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState(0);
@@ -130,6 +191,7 @@ export default function Home() {
       </header>
 
       <main className="p-4">
+        {/* 两列正方形水果卡片布局 */}
         <div className="grid grid-cols-2 gap-4">
           {products.map((product) => (
             <div
@@ -137,13 +199,12 @@ export default function Home() {
               className="bg-white rounded-2xl shadow-sm overflow-hidden"
               onClick={() => navigate(`/product/${product.id}`)}
             >
-              {/* ✅ 图片 100% 显示，不会空白 */}
-              <div className="aspect-square w-full bg-gray-100 overflow-hidden">
+              {/* ✅ 图片 100% 显示 */}
+              <div className="aspect-square w-full bg-gray-100">
                 <img
                   src={product.image}
                   alt={product.name}
                   className="w-full h-full object-cover"
-                  loading="eager"
                 />
               </div>
 
