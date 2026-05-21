@@ -12,15 +12,16 @@ interface Product {
   category: string;
 }
 
+// 🔥 全部用在线稳定面包图，不需要你本地任何图片！
 const products: Product[] = [
-  { id: 1, name: "经典酸种面包", price: 28, rating: 4.9, description: "天然酵母发酵", image: "/breadImg/1", category: "sourdough" },
-  { id: 2, name: "法式可颂", price: 15, rating: 4.8, description: "奶香酥脆", image: "/breadImg/2", category: "french" },
-  { id: 3, name: "全麦吐司", price: 22, rating: 4.7, description: "100%全麦", image: "/breadImg/3", category: "toast" },
-  { id: 4, name: "黑麦核桃面包", price: 32, rating: 4.6, description: "黑麦+核桃", image: "/breadImg/4", category: "wholeWheat" },
-  { id: 5, name: "牛奶软吐司", price: 18, rating: 4.9, description: "柔软拉丝", image: "/breadImg/5", category: "toast" },
-  { id: 6, name: "抹茶红豆包", price: 24, rating: 4.8, description: "日式甜面包", image: "/breadImg/6", category: "sweet" },
-  { id: 7, name: "海盐芝士面包", price: 26, rating: 4.8, description: "咸香芝士", image: "/breadImg/7", category: "savory" },
-  { id: 8, name: "蔓越莓软欧", price: 25, rating: 4.7, description: "酸甜口感", image: "/breadImg/8", category: "wholeWheat" },
+  { id: 1, name: "经典酸种面包", price: 28, rating: 4.9, description: "天然酵母发酵", image: "https://i.imgur.com/0LbI7t9.jpg", category: "sourdough" },
+  { id: 2, name: "法式可颂", price: 15, rating: 4.8, description: "奶香酥脆", image: "https://i.imgur.com/4T1JZ8J.jpg", category: "french" },
+  { id: 3, name: "全麦吐司", price: 22, rating: 4.7, description: "100%全麦", image: "https://i.imgur.com/9X7KQ1d.jpg", category: "toast" },
+  { id: 4, name: "黑麦核桃面包", price: 32, rating: 4.6, description: "黑麦+核桃", image: "https://i.imgur.com/3aX9fG7.jpg", category: "wholeWheat" },
+  { id: 5, name: "牛奶软吐司", price: 18, rating: 4.9, description: "柔软拉丝", image: "https://i.imgur.com/7ZpXfQ9.jpg", category: "toast" },
+  { id: 6, name: "抹茶红豆包", price: 24, rating: 4.8, description: "日式甜面包", image: "https://i.imgur.com/5V8ZQV1.jpg", category: "sweet" },
+  { id: 7, name: "海盐芝士面包", price: 26, rating: 4.8, description: "咸香芝士", image: "https://i.imgur.com/6e0tQZJ.jpg", category: "savory" },
+  { id: 8, name: "蔓越莓软欧", price: 25, rating: 4.7, description: "酸甜口感", image: "https://i.imgur.com/8vNQZJ9.jpg", category: "wholeWheat" },
 ];
 
 const categories = ['全部', '酸种面包', '全麦/无油', '吐司/三明治', '法式', '甜口', '咸口'];
@@ -89,6 +90,7 @@ export default function Home() {
                   src={product.image}
                   alt={product.name}
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
 
