@@ -158,40 +158,33 @@ export default function Home() {
           </button>
         </section>
 
-<div className="grid grid-cols-1 gap-4">
-          {products.map((product, index) => (
-            <div 
-              key={product.id}
-className="bg-white rounded-2xl shadow-soft hover:shadow-card transition-all animate-slide-up cursor-pointer overflow-hidden"
-              style={{ animationDelay: `${index * 100}ms` }}
-              onClick={() => navigate(`/product/${product.id}`)}
-            >
-              <div className="relative mb-3">
-<img
-  src={product.image}
-  alt={product.name}
-  className="w-full h-40 object-cover"
-/>
-                <div className="absolute top-2 left-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full flex items-center gap-1">
-                  <svg viewBox="0 0 24 24" className="w-4 h-4 text-yellow-500" fill="currentColor">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
-                  <span className="text-xs font-medium text-brown-700">{product.rating}</span>
-                </div>
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    toggleWishlist(product.id);
-                  }}
-                  className={`absolute top-2 right-2 w-8 h-8 rounded-full flex items-center justify-center transition-all ${
-                    wishlist.includes(product.id)
-                      ? 'bg-red-500 text-white'
-                      : 'bg-white/90 backdrop-blur-sm text-brown-400 hover:text-red-500'
-                  }`}
-                >
-                  <Heart className="w-4 h-4" fill={wishlist.includes(product.id) ? 'currentColor' : 'none'} />
-                </button>
-              </div>
+<div className="grid grid-cols-2 gap-4">
+  {products.map((product, index) => (
+    <div
+      key={product.id}
+      className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-all cursor-pointer overflow-hidden"
+      onClick={() => navigate(`/product/${product.id}`)}
+    >
+      {/* 1:1 方形容器，和你水果卡片一样 */}
+      <div className="w-full aspect-square bg-gray-50 flex items-center justify-center p-2">
+        <img
+          src={product.image}
+          alt={product.name}
+          className="max-w-full max-h-full object-contain rounded-lg"
+        />
+      </div>
+
+      {/* 文字区域，和你水果卡片风格一致 */}
+      <div className="p-3">
+        <h3 className="font-semibold text-gray-800 text-sm">{product.name}</h3>
+        <div className="flex justify-between items-center mt-2">
+          <span className="text-orange-500 font-bold">¥{product.price}</span>
+          <span className="text-yellow-500 text-xs">⭐{product.rating}</span>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
 
               <h3 className="font-semibold text-brown-800 mb-1">{product.name}</h3>
               <p className="text-sm text-brown-500 mb-3 line-clamp-2">{product.description}</p>
