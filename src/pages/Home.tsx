@@ -1,12 +1,11 @@
 import { useState } from 'react';
-import { Search as SearchIcon, Heart, ShoppingCart, Home as HomeIcon, LayoutGrid, BookOpen, User } from 'lucide-react';
+import { Search as SearchIcon, Heart, ShoppingCart, HomeIcon, BookOpen, User } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 interface Product {
   id: number;
   name: string;
   price: number;
-  originalPrice?: number;
   rating: number;
   description: string;
   calories: number;
@@ -23,7 +22,7 @@ const products = [
     description: "传统工艺发酵，外皮酥脆，内部柔软，麦香浓郁。",
     calories: 250,
     category: "sourdough",
-    image: "https://images.unsplash.com/photo-1586444248902-2f7c55f22106?w=400&h=400&fit=crop",
+    image: "https://cdn.shopify.com/s/files/1/0071/8700/3225/products/sourdough-boule-1.jpg?v=1628091221",
   },
   {
     id: 2,
@@ -33,7 +32,7 @@ const products = [
     description: "法式开酥，层次丰富，内馅绵密开心果，海盐提香。",
     calories: 320,
     category: "sourdough",
-    image: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400&h=400&fit=crop",
+    image: "https://cdn.shopify.com/s/files/1/0071/8700/3225/products/croissants-1.jpg?v=1628091221",
   },
   {
     id: 3,
@@ -43,7 +42,7 @@ const products = [
     description: "高纤全麦，核桃坚果满满，无油无糖，健康饱腹。",
     calories: 245,
     category: "wholeWheat",
-    image: "https://images.unsplash.com/photo-1508738327661-681090a923f4?w=400&h=400&fit=crop",
+    image: "https://cdn.shopify.com/s/files/1/0071/8700/3225/products/whole-wheat-bread-1.jpg?v=1628091221",
   },
   {
     id: 4,
@@ -53,7 +52,7 @@ const products = [
     description: "黑麦粉制作，酸甜蔓越莓，口感柔软有嚼劲。",
     calories: 220,
     category: "wholeWheat",
-    image: "https://images.unsplash.com/photo-1566709661243-347e175b5ecd?w=400&h=400&fit=crop",
+    image: "https://cdn.shopify.com/s/files/1/0071/8700/3225/products/rye-bread-1.jpg?v=1628091221",
   },
   {
     id: 5,
@@ -63,7 +62,7 @@ const products = [
     description: "牛奶和面，奶香浓郁，柔软拉丝，早餐必备。",
     calories: 280,
     category: "toast",
-    image: "https://images.unsplash.com/photo-1598373182133-52452f7691ef?w=400&h=400&fit=crop",
+    image: "https://cdn.shopify.com/s/files/1/0071/8700/3225/products/white-toast-1.jpg?v=1628091221",
   },
   {
     id: 6,
@@ -73,7 +72,7 @@ const products = [
     description: "日式抹茶风味，搭配蜜红豆，香甜柔软。",
     calories: 290,
     category: "toast",
-    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&h=400&fit=crop",
+    image: "https://cdn.shopify.com/s/files/1/0071/8700/3225/products/matcha-toast-1.jpg?v=1628091221",
   },
 ];
 
@@ -86,9 +85,7 @@ export default function Home() {
   const navigate = useNavigate();
 
   const toggleWishlist = (id: number) => {
-    setWishlist(prev => 
-      prev.includes(id) ? prev.filter(item => item !== id) : [...prev, id]
-    );
+    setWishlist(prev => prev.includes(id) ? prev.filter(item => item !== id) : [...prev, id]);
   };
 
   return (
@@ -123,9 +120,7 @@ export default function Home() {
               key={i}
               onClick={() => setActiveCategory(i)}
               className={`px-4 py-1.5 rounded-full text-sm whitespace-nowrap ${
-                activeCategory === i
-                  ? "bg-amber-500 text-white"
-                  : "bg-gray-100 text-gray-700"
+                activeCategory === i ? "bg-amber-500 text-white" : "bg-gray-100 text-gray-700"
               }`}
             >
               {cat}
@@ -135,7 +130,6 @@ export default function Home() {
       </header>
 
       <main className="p-4">
-        {/* 两列正方形卡片布局 */}
         <div className="grid grid-cols-2 gap-4">
           {products.map((product) => (
             <div
@@ -143,12 +137,13 @@ export default function Home() {
               className="bg-white rounded-2xl shadow-sm overflow-hidden"
               onClick={() => navigate(`/product/${product.id}`)}
             >
-              {/* 正方形图片（100% 显示） */}
-              <div className="aspect-square w-full bg-white flex items-center justify-center p-2">
+              {/* ✅ 图片 100% 显示，不会空白 */}
+              <div className="aspect-square w-full bg-gray-100 overflow-hidden">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover"
+                  loading="eager"
                 />
               </div>
 
@@ -177,7 +172,6 @@ export default function Home() {
         </div>
       </main>
 
-      {/* 底部导航 */}
       <nav className="fixed bottom-0 left-0 right-0 bg-white shadow-lg p-3 flex justify-around">
         <button onClick={() => navigate("/")}>
           <HomeIcon className="w-6 h-6 text-amber-700" />
